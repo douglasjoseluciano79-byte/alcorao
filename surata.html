@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leitura - Alcorao</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-dark sticky-top">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="index.html">Alcorao</a>
+    <div class="d-flex gap-2 align-items-center">
+      <span id="navTitulo" class="text-white small"></span>
+      <button class="btn btn-light btn-sm" onclick="window.history.back()">Voltar</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4">
+  <div class="surata-header text-center mb-4">
+    <div id="arabicName" class="arabic-title"></div>
+    <h2 id="titulo" class="mt-2"></h2>
+    <div id="meta" class="text-muted small"></div>
+  </div>
+
+  <div id="bismillah" class="bismillah-box text-center mb-4 d-none">
+    bismillah arabic here
+    <div class="bismillah-pt">Em nome de Deus, o Clemente, o Misericordioso</div>
+  </div>
+
+  <div class="audio-player-wrap mb-4">
+    <div class="d-flex align-items-center gap-3">
+      <span class="audio-label">Audio</span>
+      <audio id="audioPlayer" controls class="flex-grow-1"></audio>
+    </div>
+    <div id="audioInfo" class="small text-muted mt-1"></div>
+  </div>
+
+  <div id="loading" class="text-center py-5">
+    <div class="spinner-border text-success" role="status"></div>
+    <p class="mt-2 text-muted">A carregar surata...</p>
+  </div>
+
+  <div id="conteudo"></div>
+</div>
+
+<script src="js/surata.js"></script>
+</body>
+</html>
